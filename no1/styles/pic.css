@@ -1,0 +1,24 @@
+@import url("./card.css");
+@import url("./text.css");
+
+.container {
+    width: 70%;
+    margin: auto;
+    padding: auto;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 20px;
+}
+.container img {
+    margin: 10px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.title-text {
+    text-align: center;
+}

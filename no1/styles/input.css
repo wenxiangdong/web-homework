@@ -1,0 +1,5 @@
+input[type="text"], input[type="password"] {
+    padding: 5px;
+    border: 1px solid #dcdee2;
+    border-radius: 5px;
+}
