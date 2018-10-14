@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海报制作</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./scripts/zrender.js"></script>
+    <script src="./scripts/editor.js"></script>
+    <link rel="stylesheet" href="./styles/editor.css" type="text/css"/>
+</head>
+<body>
+    <h3>可选图片</h3>
+    <div id="pic-list"></div>
+    <div>
+        <input name="mode" type="radio" id="single"><label for="single">单图片编辑</label>
+        <input name="mode" type="radio" id="multi"><label for="multi">多图片合成</label>
+    </div>
+    <div id="editor">
+    </div>
+    <div id="multi-pic-editor">
+            <div>
+                    <button id="reset-zrender-btn" class="default-button">重置</button>
+            </div>
+            <div id="zrender"></div>
+    </div>
+</body>
+</html>

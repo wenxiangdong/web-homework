@@ -1,0 +1,30 @@
+@import url("./button.css");
+@import url("./card.css");
+@import url("./form.css");
+@import url("./input.css");
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.out {
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 10px;
+    box-sizing: border-box;
+}
+
+.login-card {
+    width: 50%;
+    padding: 20px;
+    margin: auto;
+}
+
+@media screen and (max-width: 500px) {
+    .login-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

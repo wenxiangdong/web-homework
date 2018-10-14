@@ -1,0 +1,21 @@
+* {
+    color: #515a6e;
+}
+
+
+.form-item {
+    margin: 10px auto;
+    text-align: left;
+}
+
+
+.form-label {
+    display: inline-block;
+    min-width: 100px;
+}
+
+form input {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
