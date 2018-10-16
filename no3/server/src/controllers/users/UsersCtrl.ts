@@ -1,8 +1,7 @@
-import {Controller, QueryParams, Required, Post, BodyParams} from "@tsed/common";
+import {Controller, Required, Post, BodyParams} from "@tsed/common";
 import {HttpResponse} from "../../types/HttpResponse";
 import {$log} from "ts-log-debug";
 import {UsersService} from "../../services/users/UsersService";
-import {Example} from "@tsed/swagger";
 
 /**
  * 用户提交的表单
@@ -32,9 +31,25 @@ export class UsersCtrl {
                 user.username,
                 user.password
             );
-            return HttpResponse.generateSuccessResponse<string>(res);
+            return HttpResponse.generateSuccessResponse(res);
         } catch (e) {
             $log.info(e.message);
+            return HttpResponse.generateErrorResponse(e.message);
+        }
+    }
+
+    @Post("/signin")
+    async signin(
+        @Required()
+        @BodyParams() user: UserForm
+    ): Promise<HttpResponse> {
+        try {
+            await this.usersService.signin(
+                user.username,
+                user.password
+            );
+            return HttpResponse.generateSuccessResponse(null);
+        } catch (e) {
             return HttpResponse.generateErrorResponse(e.message);
         }
     }

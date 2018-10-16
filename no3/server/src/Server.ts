@@ -6,6 +6,7 @@ import {Cors} from "./middlewares/Cors";
 @ServerSettings({
     rootDir: __dirname,
     acceptMimes: ["application/json"],
+    port: 3000,
     logger: {
         debug: false,
         logRequest: true,
@@ -18,8 +19,9 @@ import {Cors} from "./middlewares/Cors";
         {
             name: "default",
             type: "mysql",
-            host: "47.106.233.50",
-            port: 5432,
+            // host: "47.106.233.50",
+            host: "localhost",
+            port: 3306,
             username: "root",
             password: "970603",
             database: "WebHomework",
